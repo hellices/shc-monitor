@@ -1,0 +1,10 @@
+apiVersion: opentelemetry.io/v1alpha1
+kind: Instrumentation
+metadata:
+  name: instrumentation
+spec:
+  exporter:
+    endpoint: 'http://otel-collector-headless.monitor:4317'
+  sampler:
+    argument: 1
+    type: parentbased_traceidratio
